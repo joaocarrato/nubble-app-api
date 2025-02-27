@@ -147,7 +147,7 @@ export const logger: LoggerConfig = {
   | reading the `name` property from the `package.json` file.
   |
   */
-  name: Env.get('APP_NAME'),
+  name: Env.get('APP_NAME')
 
   /*
   |--------------------------------------------------------------------------
