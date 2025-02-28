@@ -12,7 +12,7 @@ const getConnectionFromUrl = (): Partial<DatabaseConfig['connections']['pg']> =>
   
   return {
     host: parsedUrl.host || Env.get('PG_HOST'),
-    port: parsedUrl.port ? parseInt(parsedUrl.port) : Env.get('PG_PORT'),
+    port: parsedUrl.port ? parseInt(parsedUrl.port) : Env.get('PG_PORT') || 3333,
     user: parsedUrl.user || Env.get('PG_USER'),
     password: parsedUrl.password || Env.get('PG_PASSWORD'),
     database: parsedUrl.database || Env.get('PG_DB_NAME'),
