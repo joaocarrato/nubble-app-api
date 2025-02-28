@@ -38,12 +38,12 @@ export default Env.rules({
   REFRESH_TOKEN_EXPIRES_IN: Env.schema.string(),
 
   /** Database */
+  DB_CONNECTION: Env.schema.string(),
   PG_HOST: Env.schema.string({ format: 'host' }),
   PG_PORT: Env.schema.number(),
   PG_USER: Env.schema.string(),
   PG_PASSWORD: Env.schema.string.optional(),
   PG_DB_NAME: Env.schema.string(),
-  PG_DB_NAME_SHADOW: Env.schema.string(),
 
   /** Email */
   SMTP_HOST: Env.schema.string({ format: 'host' }),
